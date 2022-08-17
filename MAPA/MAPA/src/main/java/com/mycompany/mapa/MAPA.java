@@ -10,7 +10,7 @@ public class MAPA {
 
     public static void main(String[] args) {
         ///// criando o evento
-        Evento evento = new Evento("Evento 01", "2022-12-31", 1550, "18000");
+        Evento evento = new Evento("Evento 01", "2022-12-31", 1550, 2);
 
         String nomeEvento = evento.getNome();
         String dataEvento = evento.getData();
@@ -28,6 +28,17 @@ public class MAPA {
         ingresso1.setTipo(2);
 
         evento.cadastraIngresso(ingresso1);
+        
+        Ingressos ingresso2 = new Ingressos();
+
+        ingresso2.setNome("Saulo");
+        ingresso2.setCpf("123.999.999-99");
+        ingresso2.setEvento(nomeEvento);
+        ingresso2.setValorIngresso(valorUnico);
+        ingresso2.setData(dataEvento);
+        ingresso2.setTipo(3);
+
+        evento.cadastraIngresso(ingresso2);
 
         // retornado a lista de ingressos
 

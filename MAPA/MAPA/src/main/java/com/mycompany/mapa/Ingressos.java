@@ -15,7 +15,7 @@ public class Ingressos {
     private String cpf;
     private String evento;
     private int valorIngresso;
-    private double tipo;
+    private int tipo;
     private String data;
     
     
@@ -51,7 +51,7 @@ public class Ingressos {
         this.evento = evento;
     }
 
-    public double getTipo() {
+    public int getTipo() {
         return tipo;
     }
 
@@ -70,28 +70,7 @@ public class Ingressos {
     
     
     
-    
-    public double valorFinal(){
-        
-        if(tipo == 1){
-            //System.out.println("Ingresso pista");
-           tipo = this.valorIngresso;
-            
-        } else if(tipo == 2){
-            //System.out.println("Ingresso Vip");
-            tipo = this.valorIngresso + (this.valorIngresso * 0.3);
-
-        } else if(tipo == 3){
-            //System.out.println("Ingresso Vip");
-            tipo =this.valorIngresso + (this.valorIngresso * 0.6);
-       
-        } else {
-            System.out.println("Tipo invalido");
-         
-        }
-        return tipo;
-    }
-    
+ 
     
     
     
