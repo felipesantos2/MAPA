@@ -70,8 +70,7 @@ public class Evento {
         this.ingresso = ingresso;
     }
     
-    public double getIngressoValorTipo(int tipo, int valorUnico)
-    {
+    public double getIngressoValorTipo(int tipo, int valorUnico) {
         int valorTipo = tipo;
         int valorUnicoIngresso = valorUnico;
         
@@ -84,18 +83,27 @@ public class Evento {
             return valorUnicoIngresso;
         }
     }
+    
+    public String getTipo(){
+        if(valorTipo == 3){
+            System.out.printl("Ingresso Pista");
+        }
+    }
+    
+    
 
     public ArrayList<String> getIngresso() {
         
         int QtdIngressos = ingresso.size();
         
-        System.out.println("Capacidade Total Disponível: " + capacidade);
+        
 
         for (int i = 0; i < ingresso.size(); i++) {
             
             if( capacidade >= (i+1) ){
                 System.out.println("\n\n\n-------  DADOS DO INGRESSO  -------\n\n");
-                System.out.println("Com esta venda estão disponíveis: " + (capacidade-(i+1)));
+                System.out.println("Capacidade Total Disponível: " + capacidade + "\n");
+                System.out.println("Com esta venda estão disponíveis: " + (capacidade-(i+1)) + "\n");
             }
             else {
                 System.out.println("Ingressos Indisponíveis: Venda Não pode ser concluída" );
@@ -106,10 +114,9 @@ public class Evento {
             System.out.println("EVENTO: " + ingresso.get(i).getEvento());
             System.out.println("Data: " + ingresso.get(i).getData());
             System.out.println("NOME: " + ingresso.get(i).getNome());
-            System.out.println("CPF: " + ingresso.get(i).getCpf() + "\n");
+            System.out.println("CPF: " + ingresso.get(i).getCpf());
             System.out.println("Tipo Local: " + ingresso.get(i).getTipo()+ "\n");
             System.out.println("Valor do Ingresso: " + this.getIngressoValorTipo(ingresso.get(i).getTipo(), ingresso.get(i).valorIngresso() ) + "\n");
-            System.out.println("-----------------------------------\n\n");
             System.out.println("-----------------------------------\n\n");
         }
         
